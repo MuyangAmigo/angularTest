@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<body>
+
+<h3>This is Angular Learning Test 1</h3>
+<p>Try to type soem names here.</p>
+
+<div ng-app="myApp" ng-controller="myController">
+
+First Name: <input type="text" ng-model="firstName" placeholder="First Name"> <br>
+Last Name: <input type="text" ng-model="lastName" placeholder="Last Name"> <br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+</div>
+
+<script>
+var test = angular.module('myApp', []);
+test.controller('myController', function($scope) {
+	$scope.firstName = "John";
+	$scope.lastName = "Doe"
+});
+
+</script>
+
+
+
+
+</body>
+</html>
