@@ -1,6 +1,18 @@
 'use strict';
 
 /* jasmine specs for controllers go here */
+
+describe('phonecatApp', function() {
+
+  beforeEach(module('phonecatApp'));
+
+  it('shoule create "phones" model with 3 phones', inject(function($controller) {
+    var scope = {};
+        ctrl = $controller('PhoneListCtrl', {$scope:scope});
+    expect(scope.phones.length).toBe(3);
+  }));
+});
+
 describe('PhoneCat controllers', function() {
 
   beforeEach(function(){
