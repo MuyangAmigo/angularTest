@@ -2,10 +2,16 @@
 <html lang="en" ng-app="phonecatApp">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Google Phone Gallery</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
@@ -21,12 +27,17 @@
 
 <body ng-controller="PhoneListCtrl">
 
-  <ul>
-    <li ng-repeat="phone in phones">
-      <span>{{phone.name}}</span>
-      <p>{{phone.snippet}}</p>
-    </li>
-  </ul>
+  <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li ng-repeat="phone in phones">
+          <span>{{phone.name}}</span>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 </body>
 </html>
